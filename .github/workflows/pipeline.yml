@@ -25,4 +25,4 @@ jobs:
       - name: Check style
         run: |
           cd full-stack-open-pokedex
-          npm run eslint || echo "ESLint failed. Please check for issues."
+          npm run eslint
