@@ -6,7 +6,6 @@ import ErrorMessage from './ErrorMessage'
 import PokemonPage from './PokemonPage'
 import PokemonList from './PokemonList'
 
-//Testing workflow triggering
 
 const mapResults = (({ results }) => results.map(({ url, name }) => ({
   url,
