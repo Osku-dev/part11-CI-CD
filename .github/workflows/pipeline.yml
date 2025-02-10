@@ -22,6 +22,11 @@ jobs:
           cd full-stack-open-pokedex
           npm ci  # Ensures a clean install, including Playwright
 
+      - name: Install Playwright browsers
+        run: |
+          cd full-stack-open-pokedex
+          npx playwright install  # Download the necessary browsers
+
       - name: Run Playwright tests
         run: |
           cd full-stack-open-pokedex
