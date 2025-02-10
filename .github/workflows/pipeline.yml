@@ -17,10 +17,15 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies 
+      - name: Install dependencies
         run: |
           cd full-stack-open-pokedex
-          npm ci  # Ensures a clean install
+          npm ci  # Ensures a clean install, including Playwright
+
+      - name: Run Playwright tests
+        run: |
+          cd full-stack-open-pokedex
+          npm run test:e2e  # Assumes you have a script to run Playwright tests
 
       - name: Check style
         run: |
