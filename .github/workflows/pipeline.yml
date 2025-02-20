@@ -66,7 +66,7 @@ jobs:
     if: github.ref == 'refs/heads/main'  # Remove SKIP_DEPLOYMENT check for now
     steps:
       - name: Debug GitHub env variables
-        run: echo "github.env.SKIP_DEPLOYMENT is ${{ github.env.SKIP_DEPLOYMENT }}"
+        run: echo "github.env.SKIP_DEPLOYMENT is ${{env.SKIP_DEPLOYMENT }}"
     
       - name: Checkout repository
         uses: actions/checkout@v4
