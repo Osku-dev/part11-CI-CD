@@ -63,8 +63,11 @@ jobs:
   tag_release:
     needs: [simple_deployment_pipeline]
     runs-on: ubuntu-20.04
-    if: github.ref == 'refs/heads/main' && github.env.SKIP_DEPLOYMENT == 'false'
+    if: github.ref == 'refs/heads/main'  # Remove SKIP_DEPLOYMENT check for now
     steps:
+      - name: Debug GitHub env variables
+        run: echo "github.env.SKIP_DEPLOYMENT is ${{ github.env.SKIP_DEPLOYMENT }}"
+    
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
