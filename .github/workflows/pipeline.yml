@@ -68,7 +68,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Fetch all commit history and tags. testing branch protection
+          fetch-depth: 0  # Fetch all commit history and tags. testing branch protection again
 
       - name: Bump version and push tag
         uses: anothrNick/github-tag-action@f278d49
