@@ -113,7 +113,7 @@ describe('<PokemonPage />', () => {
       )
     })
 
-    expect(screen.getByText('Previous')).toHaveAttribute('href', '/pokemon/ditto')
+    expect(screen.getByText('Previ')).toHaveAttribute('href', '/pokemon/ditto') // simulating error for discord notifications
     expect(screen.getByText('Next')).toHaveAttribute('href', '/pokemon/vaporeon')
   })
 
