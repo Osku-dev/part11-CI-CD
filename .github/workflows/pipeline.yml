@@ -65,8 +65,8 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: info
-          description: ""
-          details: "✅ Deployment successful!\n🚀 **Deployed by:** ${{ github.actor }}\n🔗 **Events page in Render:** [View in Render](https://dashboard.render.com/web/srv-${{ secrets.RENDER_SERVICE_ID }})"
+          description: "✅ Deployment successful!"
+          details: "🚀 **Deployed by:** ${{ github.actor }}\n🔗 **Events page in Render:** [View in Render](https://dashboard.render.com/web/srv-${{ secrets.RENDER_SERVICE_ID }})"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
       - name: Notify Discord on Failure
