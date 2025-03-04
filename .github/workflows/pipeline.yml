@@ -65,6 +65,7 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: info
+          description: ""
           details: "✅ Deployment successful!\n🚀 **Deployed by:** ${{ github.actor }}\n🔗 **Events page in Render:** [View in Render](https://dashboard.render.com/web/srv-${{ secrets.RENDER_SERVICE_ID }})"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
@@ -73,6 +74,7 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: error
+          description: ""
           details: "❌ Deployment failed!\n👤 **Committed by:** ${{ github.actor }}\n🔗 **Failed commit:** [View commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
     
