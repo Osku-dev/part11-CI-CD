@@ -74,8 +74,8 @@ jobs:
         uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: error
-          description: ""
-          details: "❌ Deployment failed!\n👤 **Committed by:** ${{ github.actor }}\n🔗 **Failed commit:** [View commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
+          description: "❌ Deployment failed!"
+          details: "👤 **Committed by:** ${{ github.actor }}\n🔗 **Failed commit:** [View commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
     
 
