@@ -62,19 +62,19 @@ jobs:
 
       - name: Notify Discord on Success
         if: success()
-        uses: rjstone/discord-webhook-notify@v1
+        uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: info
           details: "✅ Deployment successful!\n🚀 **Deployed by:** ${{ github.actor }}\n🔗 **Build URL:** [View in Render](https://dashboard.render.com/web/srv-${{ secrets.RENDER_SERVICE_ID }})"
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
 
       - name: Notify Discord on Failure
         if: failure()
-        uses: rjstone/discord-webhook-notify@v1
+        uses: rjstone/discord-webhook-notify@v1.0.4
         with:
           severity: error
           details: "❌ Deployment failed!\n👤 **Committed by:** ${{ github.actor }}\n🔗 **Failed commit:** [View commit](https://github.com/${{ github.repository }}/commit/${{ github.sha }})"
-          webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
+          webhookUrl: ${{ secrets.DISCORD_WEBHOOK_URL }}
     
 
   tag_release:
