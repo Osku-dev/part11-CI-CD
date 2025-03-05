@@ -1,9 +1,8 @@
 name: Periodic Health Check
 
 on:
-  push:
-    branches:
-      - main
+  schedule:
+    - cron: '*/10 * * * *'  # Runs every 10 minutes (for testing)
 
 jobs:
   health-check:
@@ -16,3 +15,4 @@ jobs:
           max-attempts: 3
           retry-delay: 5s
           follow-redirect: true
+
